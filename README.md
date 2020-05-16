@@ -1,37 +1,113 @@
-## Welcome to GitHub Pages
+## Welcome to Dao-UI
 
-You can use the [editor on GitHub](https://github.com/OtabekSadiridinov/Dao-UI/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
+This is not just a UI Framework. It is intended to help VueJS developers to solve problems that are belonged to MDC(Material Design Components. And you can find so many helpful things related to design except the Material Deisgn, too.
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+## Installation
 
-### Markdown
-
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
-
-```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
+### CDN Usage
+Just easily integrate the component you want by calling just only that component not an entire library.
+```html
+<html>
+  <head>
+    <link rel="stylesheet"
+      href="https://cdnjs.com/libraries/normalize">
+    <link rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" type="text/css">
+    <link rel="stylesheet"
+      href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet"
+      href="https://unpkg.com/material-components-vue/dist/typography/typography.min.css">
+    <link rel="stylesheet"
+      href="https://unpkg.com/material-components-vue/dist/button/button.min.css">
+  </head>
+  <body>
+    <div id="app">
+      <m-typography>
+        <m-button>Example</m-button>
+      </m-typography>
+    </div>
+    <script src="https://unpkg.com/vue"></script>
+    <script
+      src="https://unpkg.com/material-components-vue/dist/typography/typography.min.js">
+    </script>
+    <script
+      src="https://unpkg.com/material-components-vue/dist/button/button.min.js">
+    </script>
+    <script>
+      const app = new Vue({
+        el: '#app'
+      })
+    </script>
+  </body>
+ </html>
 ```
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
+### Theming
+You can setup your own colors by integrating a theme component in your template. And not you should pass n an object with CSS custom properties. But you always should remember the browser compability.
+```html
+<head>
+  <link rel="stylesheet"
+      href="https://unpkg.com/material-components-vue/dist/theme/theme.min.css">
+</head>
+<body>
+  <m-theme :customStyle="material">
+    <m-button>
+      Example
+    </m-button>
+  </m-theme>
+  <script>
+    const app = new Vue({
+      el: '#app',
+      data() {
+        return {
+          material: {
+            '--mdc-theme-primary':  '#5e35b1',
+            '--mdc-theme-secondary': '#ff5722',
+            '--mdc-theme-background': '#ffffff'
+          }
+        }
+      }
+    })
+  </script>
+</body>
+```
+For more details see [Material Web Design - Custom CSS properties](https://github.com/material-components/material-components-web/blob/master/packages/mdc-theme/README.md#css-custom-properties).
 
-### Jekyll Themes
+### Bundler usage
+##### Installing
+```bash
+npm install --save dao-ui
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/OtabekSadiridinov/Dao-UI/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
+# or with yarn
+yarn add dao-ui
+```
 
-### Support or Contact
+##### Importing
+```html
+<template>
+  <m-button>Hello</m-button>
+</template>
 
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+<script>
+import Button from 'material-components-vue/dist/button'
+Vue.use(Button)
+
+export default {
+  // ...
+}
+</script>
+
+<style lang="scss">
+  @import "material-components-vue/dist/button/styles";
+</style>
+```
+
+And adding default Roboto font in your app root component gives you full compatibility when using this framework.
+```html
+<style>
+  @import url("https://fonts.googleapis.com/css?family=Roboto:300,400,500");
+  @import url("https://fonts.googleapis.com/icon?family=Material+Icons");
+</style>
+```
+
+### Using SASS, Color-System and more coming soon
