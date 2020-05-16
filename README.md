@@ -16,9 +16,9 @@ Just easily integrate the component you want by calling just only that component
     <link rel="stylesheet"
       href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet"
-      href="https://unpkg.com/material-components-vue/dist/typography/typography.min.css">
+      href="https://unpkg.com/dao-ui/dist/typography/typography.min.css">
     <link rel="stylesheet"
-      href="https://unpkg.com/material-components-vue/dist/button/button.min.css">
+      href="https://unpkg.com/dao-ui/dist/button/button.min.css">
   </head>
   <body>
     <div id="app">
@@ -28,10 +28,10 @@ Just easily integrate the component you want by calling just only that component
     </div>
     <script src="https://unpkg.com/vue"></script>
     <script
-      src="https://unpkg.com/material-components-vue/dist/typography/typography.min.js">
+      src="https://unpkg.com/dao-ui/dist/typography/typography.min.js">
     </script>
     <script
-      src="https://unpkg.com/material-components-vue/dist/button/button.min.js">
+      src="https://unpkg.com/dao-ui/dist/button/button.min.js">
     </script>
     <script>
       const app = new Vue({
@@ -47,7 +47,7 @@ You can setup your own colors by integrating a theme component in your template.
 ```html
 <head>
   <link rel="stylesheet"
-      href="https://unpkg.com/material-components-vue/dist/theme/theme.min.css">
+      href="https://unpkg.com/dao-ui/dist/theme/theme.min.css">
 </head>
 <body>
   <m-theme :customStyle="material">
@@ -89,7 +89,7 @@ yarn add dao-ui
 </template>
 
 <script>
-import Button from 'material-components-vue/dist/button'
+import Button from 'dao-ui/dist/button'
 Vue.use(Button)
 
 export default {
@@ -98,7 +98,7 @@ export default {
 </script>
 
 <style lang="scss">
-  @import "material-components-vue/dist/button/styles";
+  @import "dao-ui/dist/button/styles";
 </style>
 ```
 
