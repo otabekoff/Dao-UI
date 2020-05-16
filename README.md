@@ -1,6 +1,6 @@
 ## Welcome to Dao-UI
 
-This is not just a UI Framework. It is intended to help VueJS developers to solve problems that are belonged to MDC(Material Design Components. And you can find so many helpful things related to design except the Material Deisgn, too.
+This is not just a UI Framework. It is intended to help VueJS developers to solve problems that are belonged to MDC(Material Design Components). And you can find so many helpful things related to design except the Material Deisgn, too.
 
 ## Installation
 
